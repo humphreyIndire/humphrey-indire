@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eng. Humphrey Indire — Energy Transition & Climate Finance Leadership</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A1628;
+    --deep: #0D1F3C;
+    --teal: #0B7B6E;
+    --teal-light: #0FA492;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --cream: #F5F0E8;
+    --white: #FFFFFF;
+    --slate: #8896A8;
+    --light-bg: #F8F9FB;
+    --border: rgba(10,22,40,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px;
+    height: 72px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-brand { display: flex; flex-direction: column; gap: 2px; }
+  .nav-brand-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; color: var(--navy); }
+  .nav-brand-tags { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 36px; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--navy); text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 1; }
+  .nav-cta {
+    background: var(--navy); color: var(--white);
+    padding: 10px 24px; border-radius: 6px;
+    font-size: 14px; font-weight: 500; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: var(--teal); transform: translateY(-1px); }
+  .nav-badge {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(11,123,110,0.08); border: 1px solid rgba(11,123,110,0.2);
+    padding: 5px 12px; border-radius: 20px; font-size: 12px; color: var(--teal); font-weight: 500;
+  }
+  .nav-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--teal-light); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 120px 80px 80px;
+    background: var(--navy);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(11,123,110,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -100px; left: 200px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--teal-light); margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--teal-light); }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 900; line-height: 1.08;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .hero-title em { color: var(--gold); font-style: italic; }
+  .hero-subtitle { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 16px; max-width: 480px; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+  .hero-tag {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.75); padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--teal); color: var(--white);
+    padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.2s; border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--teal-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(11,123,110,0.35); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 500;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(255,255,255,0.25); transition: all 0.2s; cursor: pointer;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+
+  .hero-image-wrap {
+    position: relative; z-index: 2;
+    display: flex; justify-content: center; align-items: flex-end;
+  }
+  .hero-photo-frame {
+    width: 420px; height: 520px;
+    background: linear-gradient(135deg, rgba(11,123,110,0.3), rgba(201,168,76,0.15));
+    border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    font-size: 18px; color: rgba(255,255,255,0.3); text-align: center;
+  }
+  .hero-photo-placeholder {
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .hero-photo-placeholder .icon { font-size: 64px; opacity: 0.3; }
+  .hero-photo-placeholder p { font-size: 13px; opacity: 0.5; }
+  .hero-stats-bar {
+    position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: rgba(255,255,255,0.08); backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12); border-radius: 12px;
+    padding: 16px 32px; display: flex; gap: 40px; width: max-content;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--gold); }
+  .stat-label { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--cream); padding: 28px 80px;
+    border-bottom: 1px solid var(--border);
+  }
+  .trust-strip-inner { display: flex; align-items: center; gap: 48px; }
+  .trust-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--slate); white-space: nowrap; }
+  .trust-logos { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+  .trust-logo {
+    font-weight: 700; font-size: 13px; color: var(--navy); opacity: 0.45;
+    letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.2s;
+  }
+  .trust-logo:hover { opacity: 0.8; }
+
+  /* ── SECTIONS SHARED ── */
+  section { padding: 100px 80px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 900; color: var(--navy); line-height: 1.15; margin-bottom: 16px; }
+  .section-desc { font-size: 17px; color: var(--slate); line-height: 1.7; max-width: 600px; }
+  .section-header { margin-bottom: 56px; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
+  .about-photo {
+    width: 100%; aspect-ratio: 3/4; background: var(--light-bg);
+    border-radius: 20px; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--slate); font-size: 14px; border: 1px solid var(--border);
+  }
+  .about-photo-inner { text-align: center; }
+  .about-content {}
+  .about-quote {
+    font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic;
+    color: var(--navy); line-height: 1.6; margin-bottom: 28px;
+    padding-left: 24px; border-left: 3px solid var(--gold);
+  }
+  .about-body { font-size: 16px; color: #445; line-height: 1.8; margin-bottom: 32px; }
+  .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
+  .pillar {
+    background: var(--light-bg); border-radius: 12px; padding: 20px;
+    border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s;
+  }
+  .pillar:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .pillar-icon { font-size: 24px; margin-bottom: 8px; }
+  .pillar-title { font-weight: 600; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+  .pillar-desc { font-size: 13px; color: var(--slate); line-height: 1.5; }
+  .about-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-navy { background: var(--navy); color: white; padding: 13px 28px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+  .btn-navy:hover { background: var(--teal); transform: translateY(-1px); }
+  .btn-gold { background: var(--gold); color: var(--navy); padding: 13px 28px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; transition: all 0.2s; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* ── BOOKING ── */
+  .booking { background: var(--navy); position: relative; overflow: hidden; }
+  .booking::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 600px; height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(11,123,110,0.15));
+    pointer-events: none;
+  }
+  .booking .section-title { color: var(--white); }
+  .booking .section-label { color: var(--teal-light); }
+  .booking .section-desc { color: rgba(255,255,255,0.55); }
+  .booking-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .booking-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 36px; transition: all 0.3s; cursor: pointer; position: relative; overflow: hidden;
+  }
+  .booking-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(11,123,110,0.15), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .booking-card:hover { border-color: var(--teal-light); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+  .booking-card:hover::before { opacity: 1; }
+  .booking-card.featured { border-color: var(--gold); }
+  .booking-card.featured::after { content: 'POPULAR'; position: absolute; top: 20px; right: 20px; background: var(--gold); color: var(--navy); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 4px; }
+  .booking-icon { font-size: 40px; margin-bottom: 20px; }
+  .booking-type { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 8px; }
+  .booking-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+  .booking-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 24px; }
+  .booking-meta { display: flex; gap: 16px; margin-bottom: 28px; }
+  .booking-meta-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.5); }
+  .booking-meta-item span:first-child { font-size: 14px; }
+  .booking-price { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+  .booking-price small { font-family: 'DM Sans', sans-serif; font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 400; }
+  .booking-cta {
+    width: 100%; padding: 13px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white;
+    cursor: pointer; transition: all 0.2s; text-align: center; display: block; text-decoration: none;
+  }
+  .booking-card.featured .booking-cta { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .booking-cta:hover { background: var(--teal); border-color: var(--teal); color: white; }
+  .booking-card.featured .booking-cta:hover { background: var(--gold-light); border-color: var(--gold-light); color: var(--navy); }
+
+  /* BOOKING MODAL HINT */
+  .booking-calendar {
+    margin-top: 56px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px; padding: 40px;
+    display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+  }
+  .booking-calendar-text h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+  .booking-calendar-text p { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+  .booking-calendar-action { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
+
+  /* ── LEADERSHIP ── */
+  .leadership { background: var(--light-bg); }
+  .leadership-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: start; }
+  .experience-list { display: flex; flex-direction: column; gap: 4px; }
+  .exp-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px 32px; position: relative;
+    transition: all 0.25s; cursor: default;
+  }
+  .exp-card:hover { border-color: var(--teal); box-shadow: 0 8px 32px rgba(11,123,110,0.08); transform: translateX(4px); }
+  .exp-current { border-left: 3px solid var(--teal); }
+  .exp-badge { position: absolute; top: 20px; right: 20px; background: rgba(11,123,110,0.1); color: var(--teal); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 3px 10px; border-radius: 4px; }
+  .exp-role { font-weight: 700; font-size: 16px; color: var(--navy); margin-bottom: 4px; }
+  .exp-company { font-weight: 600; font-size: 13px; color: var(--teal); margin-bottom: 6px; }
+  .exp-period { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--slate); margin-bottom: 10px; }
+  .exp-desc { font-size: 14px; color: #556; line-height: 1.6; }
+
+  .leadership-sidebar {}
+  .leader-photo {
+    width: 100%; aspect-ratio: 4/5; background: var(--navy);
+    border-radius: 20px; margin-bottom: 24px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.2); font-size: 14px; position: relative;
+  }
+  .leader-esg {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px;
+  }
+  .esg-title { font-weight: 700; font-size: 14px; color: var(--navy); margin-bottom: 16px; }
+  .esg-bars { display: flex; flex-direction: column; gap: 12px; }
+  .esg-bar-row { display: flex; align-items: center; gap: 12px; }
+  .esg-bar-label { font-size: 12px; font-weight: 600; width: 90px; color: var(--navy); }
+  .esg-bar-track { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .esg-bar-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
+  .esg-bar-pct { font-size: 12px; font-weight: 600; color: var(--slate); width: 36px; text-align: right; }
+
+  /* ── PROJECTS ── */
+  .projects { background: var(--white); }
+  .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .project-card {
+    border: 1px solid var(--border); border-radius: 20px; overflow: hidden;
+    transition: all 0.3s; cursor: pointer;
+  }
+  .project-card:hover { border-color: var(--teal); box-shadow: 0 16px 48px rgba(11,123,110,0.1); transform: translateY(-4px); }
+  .project-card-image {
+    width: 100%; height: 220px; background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.2); font-size: 13px; position: relative;
+  }
+  .project-category {
+    position: absolute; top: 16px; left: 16px;
+    background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2); color: white;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 20px;
+  }
+  .project-card-body { padding: 28px; }
+  .project-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+  .project-desc { font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 20px; }
+  .project-outcomes { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .project-outcomes li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #445; line-height: 1.5; }
+  .project-outcomes li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .project-footer { display: flex; justify-content: space-between; align-items: center; }
+  .project-lead { display: flex; align-items: center; gap: 8px; }
+  .project-lead-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; }
+  .project-lead-name { font-size: 12px; font-weight: 600; color: var(--navy); }
+  .project-lead-role { font-size: 11px; color: var(--slate); }
+  .project-link { font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+  .project-link:hover { color: var(--navy); }
+
+  /* ── EXPERTISE ── */
+  .expertise { background: var(--cream); }
+  .expertise-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 64px; }
+  .expertise-pill {
+    background: var(--white); border: 1px solid var(--border);
+    padding: 9px 20px; border-radius: 24px; font-size: 13px; font-weight: 500;
+    color: var(--navy); cursor: pointer; transition: all 0.2s;
+  }
+  .expertise-pill:hover, .expertise-pill.active { background: var(--navy); color: white; border-color: var(--navy); }
+  .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .expertise-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px; transition: all 0.25s;
+  }
+  .expertise-card:hover { border-color: var(--teal); box-shadow: 0 8px 32px rgba(11,123,110,0.08); }
+  .expertise-icon { font-size: 36px; margin-bottom: 16px; }
+  .expertise-card-title { font-weight: 700; font-size: 16px; color: var(--navy); margin-bottom: 10px; }
+  .expertise-card-desc { font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 20px; }
+  .expertise-card-link { font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+
+  /* ── THOUGHT LEADERSHIP ── */
+  .insights { background: var(--white); }
+  .insights-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px; }
+  .insight-featured {
+    border: 1px solid var(--border); border-radius: 20px; overflow: hidden; cursor: pointer;
+    transition: all 0.3s;
+  }
+  .insight-featured:hover { border-color: var(--teal); box-shadow: 0 16px 48px rgba(11,123,110,0.08); }
+  .insight-featured-image {
+    width: 100%; height: 280px; background: linear-gradient(135deg, var(--navy), var(--teal));
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.3); font-size: 14px; position: relative;
+  }
+  .insight-featured-image .tag {
+    position: absolute; bottom: 20px; left: 24px;
+    background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 4px;
+  }
+  .insight-featured-body { padding: 32px; }
+  .insight-date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--slate); margin-bottom: 12px; }
+  .insight-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+  .insight-excerpt { font-size: 15px; color: var(--slate); line-height: 1.7; margin-bottom: 20px; }
+  .insight-read { font-size: 14px; font-weight: 600; color: var(--teal); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+  .insight-list { display: flex; flex-direction: column; gap: 16px; }
+  .insight-item {
+    border: 1px solid var(--border); border-radius: 14px; padding: 22px;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .insight-item:hover { border-color: var(--teal); transform: translateX(4px); }
+  .insight-item-tag { font-size: 11px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .insight-item-title { font-weight: 700; font-size: 15px; color: var(--navy); margin-bottom: 6px; line-height: 1.4; }
+  .insight-item-meta { font-size: 12px; color: var(--slate); }
+
+  /* ── MERCHANDISE ── */
+  .merch { background: var(--navy); position: relative; overflow: hidden; }
+  .merch::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%);
+  }
+  .merch .section-title { color: var(--white); }
+  .merch .section-label { color: var(--gold); }
+  .merch .section-desc { color: rgba(255,255,255,0.55); }
+  .merch-intro { font-size: 15px; color: rgba(255,255,255,0.45); margin-bottom: 56px; line-height: 1.7; max-width: 600px; }
+  .merch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 48px; }
+  .merch-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px; overflow: hidden; transition: all 0.3s; cursor: pointer;
+  }
+  .merch-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+  .merch-image {
+    width: 100%; aspect-ratio: 1; background: rgba(255,255,255,0.04);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 52px; transition: transform 0.3s;
+  }
+  .merch-card:hover .merch-image { transform: scale(1.05); }
+  .merch-body { padding: 20px; }
+  .merch-name { font-weight: 600; font-size: 14px; color: var(--white); margin-bottom: 4px; }
+  .merch-tagline { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 14px; line-height: 1.4; }
+  .merch-price { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+  .merch-btn {
+    width: 100%; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600;
+    background: transparent; border: 1px solid rgba(255,255,255,0.2); color: white;
+    cursor: pointer; transition: all 0.2s; text-align: center;
+  }
+  .merch-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+  .merch-shipping { text-align: center; font-size: 13px; color: rgba(255,255,255,0.3); }
+  .merch-shipping span { color: var(--gold); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--light-bg); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+  .testimonial-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 20px; padding: 36px; transition: all 0.25s; position: relative;
+  }
+  .testimonial-card:hover { box-shadow: 0 12px 40px rgba(11,123,110,0.08); border-color: var(--teal); transform: translateY(-3px); }
+  .testimonial-quote-mark { font-family: 'Playfair Display', serif; font-size: 80px; color: var(--teal); line-height: 0.6; margin-bottom: 24px; opacity: 0.3; }
+  .testimonial-text { font-size: 15px; color: #334; line-height: 1.75; margin-bottom: 28px; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 14px; }
+  .testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; color: white; flex-shrink: 0; }
+  .testimonial-name { font-weight: 700; font-size: 14px; color: var(--navy); }
+  .testimonial-role { font-size: 12px; color: var(--slate); }
+  .testimonial-verify { position: absolute; top: 20px; right: 20px; font-size: 16px; }
+  .testimonials-nav { display: flex; justify-content: center; gap: 12px; }
+  .t-nav-btn {
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--white); cursor: pointer; font-size: 16px;
+    display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+  }
+  .t-nav-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+
+  /* ── REFERRALS ── */
+  .referrals { background: var(--white); }
+  .referral-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+    border-radius: 24px; padding: 64px; position: relative; overflow: hidden; margin-bottom: 56px;
+  }
+  .referral-hero::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201,168,76,0.2) 0%, transparent 70%);
+  }
+  .referral-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+  .referral-hero-text h2 { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.2; }
+  .referral-hero-text p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
+  .referral-steps { display: flex; gap: 32px; }
+  .referral-step { display: flex; align-items: flex-start; gap: 14px; }
+  .referral-step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .referral-step-text strong { display: block; font-size: 14px; color: white; margin-bottom: 4px; }
+  .referral-step-text span { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .referral-rewards { display: flex; flex-direction: column; gap: 16px; min-width: 260px; }
+  .referral-reward {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px; padding: 18px 22px; display: flex; align-items: center; gap: 16px;
+  }
+  .reward-icon { font-size: 28px; flex-shrink: 0; }
+  .reward-title { font-weight: 600; font-size: 14px; color: white; }
+  .reward-desc { font-size: 12px; color: rgba(255,255,255,0.45); }
+  .referral-form-wrap {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+  }
+  .referral-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .form-input, .form-select, .form-textarea {
+    padding: 13px 16px; border: 1px solid var(--border); border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--navy);
+    background: var(--white); transition: border-color 0.2s;
+    outline: none; resize: vertical;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(11,123,110,0.08); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .referral-stats { display: flex; flex-direction: column; gap: 20px; }
+  .referral-stat-card {
+    background: var(--light-bg); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px;
+  }
+  .ref-stat-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: var(--teal); }
+  .ref-stat-label { font-size: 14px; color: var(--navy); font-weight: 600; margin-bottom: 4px; }
+  .ref-stat-desc { font-size: 13px; color: var(--slate); line-height: 1.5; }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--cream); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
+  .contact-info {}
+  .contact-photo {
+    width: 100%; aspect-ratio: 3/4; background: var(--navy);
+    border-radius: 20px; margin-bottom: 32px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.2); font-size: 14px;
+  }
+  .contact-links { display: flex; flex-direction: column; gap: 14px; }
+  .contact-link {
+    display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+    background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .contact-link:hover { border-color: var(--teal); transform: translateX(4px); }
+  .contact-link-icon { font-size: 20px; width: 40px; text-align: center; }
+  .contact-link-text { font-size: 14px; font-weight: 500; color: var(--navy); }
+  .contact-link-sub { font-size: 12px; color: var(--slate); }
+  .contact-form { background: var(--white); border-radius: 20px; padding: 40px; border: 1px solid var(--border); }
+  .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .contact-form p { font-size: 15px; color: var(--slate); margin-bottom: 32px; }
+  .contact-form-inner { display: flex; flex-direction: column; gap: 16px; }
+  .form-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.5);
+    padding: 64px 80px 40px;
+  }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+  .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: white; margin-bottom: 8px; }
+  .footer-brand-tagline { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 24px; }
+  .footer-socials { display: flex; gap: 10px; }
+  .footer-social {
+    width: 38px; height: 38px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center; font-size: 16px;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .footer-social:hover { background: var(--teal); border-color: var(--teal); transform: translateY(-2px); }
+  .footer-col h4 { font-size: 13px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-bottom-left { font-size: 13px; }
+  .footer-bottom-right { display: flex; gap: 24px; }
+  .footer-bottom-right a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+  .footer-bottom-right a:hover { color: var(--teal-light); }
+
+  /* ── ANIMATIONS ── */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    nav { padding: 0 32px; }
+    .hero { padding: 120px 48px 80px; grid-template-columns: 1fr; }
+    .hero-image-wrap { display: none; }
+    .hero-stats-bar { position: static; transform: none; margin-top: 40px; width: 100%; justify-content: center; }
+    section { padding: 80px 40px; }
+    .about-grid, .leadership-grid, .contact-grid { grid-template-columns: 1fr; }
+    .booking-grid { grid-template-columns: 1fr; }
+    .merch-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: 1fr 1fr; }
+    .insights-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .referral-form-wrap { grid-template-columns: 1fr; }
+    .referral-hero-inner { grid-template-columns: 1fr; }
+    .trust-strip { padding: 28px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-brand-name">Eng. Humphrey Indire</div>
+    <div class="nav-brand-tags">ENERGY · ESG · CLIMATE FINANCE</div>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#projects">Projects</a>
+    <a href="#booking">Book</a>
+    <a href="#insights">Insights</a>
+    <div class="nav-badge">Open to Advisory</div>
+    <a href="#contact" class="nav-cta">Let's Connect</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content fade-in">
+    <div class="hero-eyebrow">Africa's Climate Finance & Energy Leader</div>
+    <h1 class="hero-title">
+      Energy <em>Transition,</em><br>
+      Climate Finance &<br>
+      Infrastructure<br>
+      Leadership
+    </h1>
+    <p class="hero-subtitle">
+      Engineering sustainable energy systems and climate investment strategies across Africa — bridging policy, capital, and execution.
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">Energy Transition</span>
+      <span class="hero-tag">ESG Strategy</span>
+      <span class="hero-tag">Carbon Markets</span>
+      <span class="hero-tag">Oil & Gas Infrastructure</span>
+      <span class="hero-tag">EV Mobility</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#leadership" class="btn-primary">View Leadership & Experience →</a>
+      <a href="#booking" class="btn-outline">📅 Book a Session</a>
+    </div>
+    <div class="hero-stats-bar">
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Countries</div></div>
+      <div class="stat"><div class="stat-num">$2B+</div><div class="stat-label">Projects</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Board Seats</div></div>
+    </div>
+  </div>
+  <div class="hero-image-wrap fade-in">
+    <div class="hero-photo-frame">
+      <div class="hero-photo-placeholder">
+        <div class="icon">👤</div>
+        <p>Replace with<br>professional portrait</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-label">Associated with</div>
+    <div class="trust-logos">
+      <div class="trust-logo">KIBO Motorcycles</div>
+      <div class="trust-logo">Dalbit Petroleum</div>
+      <div class="trust-logo">KOKO Networks</div>
+      <div class="trust-logo">StarCharge Africa</div>
+      <div class="trust-logo">IFC / World Bank</div>
+      <div class="trust-logo">UNFCCC</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-photo fade-in">
+      <div class="about-photo-inner">
+        <div style="font-size:48px;opacity:0.3">👤</div>
+        <p style="margin-top:12px;font-size:13px">Replace with professional photo</p>
+      </div>
+    </div>
+    <div class="about-content fade-in">
+      <div class="section-label">About</div>
+      <h2 class="section-title">Meet Eng.<br>Humphrey Indire</h2>
+      <blockquote class="about-quote">
+        "The most powerful lever for Africa's development is the intersection of climate capital and indigenous engineering intelligence."
+      </blockquote>
+      <p class="about-body">
+        Humphrey Indire is a senior engineering leader and climate finance strategist with over 15 years of experience driving energy transitions across Sub-Saharan Africa. He currently serves in executive and advisory capacities across electric mobility, carbon markets, and sustainable infrastructure — bringing together technical depth, policy fluency, and investment acumen.
+      </p>
+      <p class="about-body" style="margin-bottom:32px">
+        Based in Nairobi, Kenya, Humphrey works at the confluence of government, private capital, and development finance to engineer climate-resilient economies at continental scale.
+      </p>
+      <div class="about-pillars">
+        <div class="pillar">
+          <div class="pillar-icon">⚡</div>
+          <div class="pillar-title">Energy Transition</div>
+          <div class="pillar-desc">Designing Africa's shift from fossil to renewable infrastructure</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🌿</div>
+          <div class="pillar-title">Carbon Markets</div>
+          <div class="pillar-desc">Structuring VCS and Gold Standard carbon offset frameworks</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🚗</div>
+          <div class="pillar-title">EV Mobility</div>
+          <div class="pillar-desc">Deploying electric mobility ecosystems across emerging markets</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">📊</div>
+          <div class="pillar-title">ESG Strategy</div>
+          <div class="pillar-desc">Integrating governance and sustainability into corporate strategy</div>
+        </div>
+      </div>
+      <div class="about-actions">
+        <a href="#" class="btn-navy">⬇ Download CV</a>
+        <a href="#booking" class="btn-gold">Book a Session</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="section-header fade-in">
+    <div class="section-label">Work With Humphrey</div>
+    <h2 class="section-title" style="color:white">Book a Session</h2>
+    <p class="section-desc" style="color:rgba(255,255,255,0.55)">From keynote speeches to fractional executive leadership — structured engagements designed to move the needle on your climate and energy goals.</p>
+  </div>
+  <div class="booking-grid fade-in">
+
+    <!-- Webinar -->
+    <div class="booking-card">
+      <div class="booking-icon">🎙️</div>
+      <div class="booking-type">Virtual Event</div>
+      <div class="booking-title">Webinar & Masterclass</div>
+      <div class="booking-desc">Deep-dive sessions on climate finance, carbon markets, energy transition, and ESG strategy for organizations and professional communities.</div>
+      <div class="booking-meta">
+        <div class="booking-meta-item"><span>⏱</span> 60–90 min</div>
+        <div class="booking-meta-item"><span>👥</span> Up to 500</div>
+      </div>
+      <div class="booking-price">$2,500 <small>/ session</small></div>
+      <a href="#contact" class="booking-cta">Book Webinar →</a>
+    </div>
+
+    <!-- Conference -->
+    <div class="booking-card featured">
+      <div class="booking-icon">🏛️</div>
+      <div class="booking-type">In-Person / Hybrid</div>
+      <div class="booking-title">Conference & Keynote</div>
+      <div class="booking-desc">Commanding keynote presentations and panel participation at industry conferences, summits, and forums across Africa and globally.</div>
+      <div class="booking-meta">
+        <div class="booking-meta-item"><span>📍</span> Global</div>
+        <div class="booking-meta-item"><span>📅</span> Flexible dates</div>
+      </div>
+      <div class="booking-price">$8,500 <small>/ engagement</small></div>
+      <a href="#contact" class="booking-cta">Book Keynote →</a>
+    </div>
+
+    <!-- Advisory -->
+    <div class="booking-card">
+      <div class="booking-icon">🧭</div>
+      <div class="booking-type">1:1 Executive Session</div>
+      <div class="booking-title">Strategy Advisory</div>
+      <div class="booking-desc">Focused advisory sessions for executives, investors, and project developers navigating climate finance, infrastructure deals, or ESG positioning.</div>
+      <div class="booking-meta">
+        <div class="booking-meta-item"><span>⏱</span> 2 hours</div>
+        <div class="booking-meta-item"><span>🔒</span> Confidential</div>
+      </div>
+      <div class="booking-price">$1,200 <small>/ session</small></div>
+      <a href="#contact" class="booking-cta">Book Advisory →</a>
+    </div>
+
+    <!-- Board / Fractional -->
+    <div class="booking-card">
+      <div class="booking-icon">🏢</div>
+      <div class="booking-type">Long-Term Engagement</div>
+      <div class="booking-title">Board / NED Role</div>
+      <div class="booking-desc">Non-executive director or board advisory roles providing strategic governance, climate expertise, and industry network access on an ongoing basis.</div>
+      <div class="booking-meta">
+        <div class="booking-meta-item"><span>📅</span> Quarterly</div>
+        <div class="booking-meta-item"><span>📋</span> Governance</div>
+      </div>
+      <div class="booking-price">Custom <small>/ annually</small></div>
+      <a href="#contact" class="booking-cta">Enquire →</a>
+    </div>
+
+    <!-- Fractional Leadership -->
+    <div class="booking-card featured" style="border-color:var(--teal-light)">
+      <div class="booking-icon">⚡</div>
+      <div class="booking-type">Fractional Executive</div>
+      <div class="booking-title">Fractional C-Suite Leadership</div>
+      <div class="booking-desc">Embedded fractional Chief Sustainability Officer, Chief Climate Officer, or VP-level energy leadership for 3–12 month engagements. Strategy + execution.</div>
+      <div class="booking-meta">
+        <div class="booking-meta-item"><span>📅</span> 3–12 months</div>
+        <div class="booking-meta-item"><span>⚡</span> High Impact</div>
+      </div>
+      <div class="booking-price">$15,000 <small>/ month</small></div>
+      <a href="#contact" class="booking-cta" style="background:var(--teal);border-color:var(--teal)">Apply Now →</a>
+    </div>
+
+    <!-- Workshop -->
+    <div class="booking-card">
+      <div class="booking-icon">🧑‍🏫</div>
+      <div class="booking-type">Training</div>
+      <div class="booking-title">Corporate Workshop</div>
+      <div class="booking-desc">Half-day or full-day workshops for corporate teams on climate risk, ESG integration, carbon credit markets, or energy transition planning.</div>
+      <div class="booking-meta">
+        <div class="booking-meta-item"><span>⏱</span> 4–8 hours</div>
+        <div class="booking-meta-item"><span>👥</span> Up to 50</div>
+      </div>
+      <div class="booking-price">$6,000 <small>/ day</small></div>
+      <a href="#contact" class="booking-cta">Book Workshop →</a>
+    </div>
+
+  </div>
+
+  <div class="booking-calendar fade-in">
+    <div class="booking-calendar-text">
+      <h3>Check Availability & Book Directly</h3>
+      <p>View Humphrey's real-time calendar and lock in your preferred date. All bookings include a pre-session briefing call and a post-session summary.</p>
+    </div>
+    <div class="booking-calendar-action">
+      <a href="#contact" class="btn-primary" style="background:var(--teal)">📅 Open Calendar →</a>
+      <div style="font-size:12px;color:rgba(255,255,255,0.35);text-align:right">Powered by Calendly / Cal.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="leadership" id="leadership">
+  <div class="section-header fade-in">
+    <div class="section-label">Leadership</div>
+    <h2 class="section-title">Leadership & Experience</h2>
+    <p class="section-desc">Executive leadership across energy infrastructure, climate finance, and electric mobility — spanning three continents.</p>
+  </div>
+  <div class="leadership-grid">
+    <div class="experience-list fade-in">
+      <div class="exp-card exp-current">
+        <div class="exp-badge">CURRENT</div>
+        <div class="exp-role">Chief Officer — Climate Finance & EV Transition</div>
+        <div class="exp-company">KIBO Motorcycles</div>
+        <div class="exp-period">2026 – Present · 1 yr</div>
+        <div class="exp-desc">Leading strategic initiatives in electric mobility and climate finance to drive sustainable transportation solutions across emerging markets.</div>
+      </div>
+      <div class="exp-card exp-current">
+        <div class="exp-badge">CURRENT</div>
+        <div class="exp-role">Non-Executive Director — Carbon Markets & Climate Strategy</div>
+        <div class="exp-company">Dalbit Petroleum</div>
+        <div class="exp-period">2026 – Present · 1 yr</div>
+        <div class="exp-desc">Advising on carbon markets and ESG integration, focusing on climate strategy and sustainable energy infrastructure development.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-role">Advisor — EV Infrastructure & Energy Transition</div>
+        <div class="exp-company">StarCharge (Africa Advisory)</div>
+        <div class="exp-period">2025 – Present · 2 yrs</div>
+        <div class="exp-desc">Supporting EV charging infrastructure deployment and market entry strategy across the African mobility ecosystem.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-role">Head of HSE & Sites</div>
+        <div class="exp-company">KOKO Networks</div>
+        <div class="exp-period">2023 – Present · 3 yrs</div>
+        <div class="exp-desc">Responsible for operational infrastructure and safety management across a network serving over 1.2 million customers in Kenya.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-role">Senior Energy Engineer — Upstream</div>
+        <div class="exp-company">TotalEnergies (East Africa)</div>
+        <div class="exp-period">2018 – 2023 · 5 yrs</div>
+        <div class="exp-desc">Led upstream oil & gas engineering projects, transitioning into renewable energy feasibility studies and carbon accounting frameworks.</div>
+      </div>
+    </div>
+    <div class="leadership-sidebar fade-in">
+      <div class="leader-photo">
+        <div style="text-align:center">
+          <div style="font-size:48px;margin-bottom:8px">👤</div>
+          <div style="font-size:13px">Replace with actual photo<br>of Eng. Humphrey Indire</div>
+        </div>
+      </div>
+      <div class="leader-esg">
+        <div class="esg-title">ESG Competency Index</div>
+        <div class="esg-bars">
+          <div class="esg-bar-row">
+            <div class="esg-bar-label">Environmental</div>
+            <div class="esg-bar-track"><div class="esg-bar-fill" style="width:92%;background:#0B7B6E"></div></div>
+            <div class="esg-bar-pct">92%</div>
+          </div>
+          <div class="esg-bar-row">
+            <div class="esg-bar-label">Carbon Markets</div>
+            <div class="esg-bar-track"><div class="esg-bar-fill" style="width:88%;background:#0FA492"></div></div>
+            <div class="esg-bar-pct">88%</div>
+          </div>
+          <div class="esg-bar-row">
+            <div class="esg-bar-label">EV / Mobility</div>
+            <div class="esg-bar-track"><div class="esg-bar-fill" style="width:85%;background:#C9A84C"></div></div>
+            <div class="esg-bar-pct">85%</div>
+          </div>
+          <div class="esg-bar-row">
+            <div class="esg-bar-label">Governance</div>
+            <div class="esg-bar-track"><div class="esg-bar-fill" style="width:90%;background:#0A1628"></div></div>
+            <div class="esg-bar-pct">90%</div>
+          </div>
+          <div class="esg-bar-row">
+            <div class="esg-bar-label">Infrastructure</div>
+            <div class="esg-bar-track"><div class="esg-bar-fill" style="width:95%;background:#1a3a5c"></div></div>
+            <div class="esg-bar-pct">95%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-header fade-in">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Major Projects &<br>Strategic Initiatives</h2>
+    <p class="section-desc">Climate finance, energy transition, and sustainability initiatives shaping emerging markets through strategic cross-border partnerships.</p>
+  </div>
+  <div class="projects-grid fade-in">
+
+    <div class="project-card">
+      <div class="project-card-image">
+        <span class="project-category">Conservation & Carbon</span>
+        <span style="font-size:13px">Project image placeholder</span>
+      </div>
+      <div class="project-card-body">
+        <div class="project-title">Mount Kenya Wildlife Conservancy Carbon & Biodiversity Project</div>
+        <div class="project-desc">A pioneering initiative preserving biodiversity while generating high-quality carbon offsets through ecosystem restoration, integrating community development with large-scale environmental protection.</div>
+        <ul class="project-outcomes">
+          <li>Restoration of 50,000 hectares of critical mountain habitat</li>
+          <li>Implementation of Verified Carbon Standard (VCS) methodologies</li>
+          <li>Direct employment for over 200 local rangers and conservationists</li>
+          <li>$12M in carbon credit revenue projected over 10-year crediting period</li>
+        </ul>
+        <div class="project-footer">
+          <div class="project-lead">
+            <div class="project-lead-avatar">HI</div>
+            <div>
+              <div class="project-lead-name">Eng. Humphrey Indire</div>
+              <div class="project-lead-role">Project Lead</div>
+            </div>
+          </div>
+          <a href="#" class="project-link">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-image" style="background:linear-gradient(135deg,#1a3a5c,#0B7B6E)">
+        <span class="project-category">Mobility & Finance</span>
+        <span style="font-size:13px">Project image placeholder</span>
+      </div>
+      <div class="project-card-body">
+        <div class="project-title">East Africa EV Charging Infrastructure Rollout</div>
+        <div class="project-desc">End-to-end market entry strategy and infrastructure deployment for electric vehicle charging networks across Kenya, Rwanda, and Uganda.</div>
+        <ul class="project-outcomes">
+          <li>200+ charging stations across 3 countries in Phase 1</li>
+          <li>$45M private equity financing structured and closed</li>
+          <li>Policy framework co-authored with Kenya Energy Regulatory Authority</li>
+          <li>30,000 EV fleet electrification target enabled</li>
+        </ul>
+        <div class="project-footer">
+          <div class="project-lead">
+            <div class="project-lead-avatar">HI</div>
+            <div>
+              <div class="project-lead-name">Eng. Humphrey Indire</div>
+              <div class="project-lead-role">Strategy Advisor</div>
+            </div>
+          </div>
+          <a href="#" class="project-link">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-image" style="background:linear-gradient(135deg,#2d1b00,#C9A84C)">
+        <span class="project-category">Energy Infrastructure</span>
+        <span style="font-size:13px">Project image placeholder</span>
+      </div>
+      <div class="project-card-body">
+        <div class="project-title">Industrial Renewable Energy Hub — Mombasa SEZ</div>
+        <div class="project-desc">Design and financing of a 180MW hybrid solar-storage industrial energy hub to power a Special Economic Zone, displacing diesel generation and reducing operational carbon intensity.</div>
+        <ul class="project-outcomes">
+          <li>180MW solar + 40MWh battery storage system</li>
+          <li>85% reduction in diesel dependency for 60 industrial tenants</li>
+          <li>IFC co-investment of $120M secured</li>
+          <li>Carbon-neutral certification pathway established</li>
+        </ul>
+        <div class="project-footer">
+          <div class="project-lead">
+            <div class="project-lead-avatar">HI</div>
+            <div>
+              <div class="project-lead-name">Eng. Humphrey Indire</div>
+              <div class="project-lead-role">Technical Lead</div>
+            </div>
+          </div>
+          <a href="#" class="project-link">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-image" style="background:linear-gradient(135deg,#0a2818,#0B7B6E)">
+        <span class="project-category">Climate Finance</span>
+        <span style="font-size:13px">Project image placeholder</span>
+      </div>
+      <div class="project-card-body">
+        <div class="project-title">Pan-African Carbon Credit Aggregation Platform</div>
+        <div class="project-desc">A structured finance vehicle aggregating small-scale community carbon projects across 8 African nations into investment-grade portfolios accessible to international buyers.</div>
+        <ul class="project-outcomes">
+          <li>85 community projects aggregated into 3 credit tranches</li>
+          <li>2.4M verified carbon tonnes issued in first cycle</li>
+          <li>Direct income to 45,000 smallholder farmers and forest communities</li>
+          <li>Partnership with Gold Standard and Verra established</li>
+        </ul>
+        <div class="project-footer">
+          <div class="project-lead">
+            <div class="project-lead-avatar">HI</div>
+            <div>
+              <div class="project-lead-name">Eng. Humphrey Indire</div>
+              <div class="project-lead-role">Architect & Advisor</div>
+            </div>
+          </div>
+          <a href="#" class="project-link">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+  <div class="section-header fade-in">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-title">Areas of Expertise</h2>
+    <p class="section-desc">Strategic capabilities focused on sustainable growth, resilient infrastructure, and long-term value creation.</p>
+  </div>
+  <div class="expertise-pills fade-in">
+    <span class="expertise-pill active">All</span>
+    <span class="expertise-pill">Energy Transition</span>
+    <span class="expertise-pill">Carbon Markets</span>
+    <span class="expertise-pill">ESG Strategy</span>
+    <span class="expertise-pill">Infrastructure</span>
+    <span class="expertise-pill">EV Mobility</span>
+    <span class="expertise-pill">Climate Finance</span>
+    <span class="expertise-pill">Risk Management</span>
+    <span class="expertise-pill">Policy</span>
+  </div>
+  <div class="expertise-grid fade-in">
+    <div class="expertise-card">
+      <div class="expertise-icon">🌍</div>
+      <div class="expertise-card-title">Climate Finance & Carbon Markets in Africa</div>
+      <div class="expertise-card-desc">Structuring carbon offset frameworks, VCS/Gold Standard certification, blended finance vehicles, and carbon credit aggregation for African project developers.</div>
+      <a href="#insights" class="expertise-card-link">View Insights →</a>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">⚡</div>
+      <div class="expertise-card-title">Electric Mobility Transition</div>
+      <div class="expertise-card-desc">Analyzing infrastructure requirements and policy frameworks needed to accelerate EV adoption in developing economies, including grid readiness and supply chain localization.</div>
+      <a href="#insights" class="expertise-card-link">View Insights →</a>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">🏭</div>
+      <div class="expertise-card-title">Sustainable Energy Infrastructure</div>
+      <div class="expertise-card-desc">Best practices for designing and financing renewable energy hubs, industrial microgrids, and hybrid systems that power economic growth while minimizing carbon footprint.</div>
+      <a href="#insights" class="expertise-card-link">View Insights →</a>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">📋</div>
+      <div class="expertise-card-title">ESG Integration & Governance</div>
+      <div class="expertise-card-desc">Embedding ESG frameworks into corporate governance, board-level reporting, investor relations, and operational systems for energy and infrastructure companies.</div>
+      <a href="#insights" class="expertise-card-link">View Insights →</a>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">🛡️</div>
+      <div class="expertise-card-title">Safety Leadership & Risk Management</div>
+      <div class="expertise-card-desc">Building industry-leading HSE systems for large-scale energy operations, regulatory compliance, and operational resilience in high-risk African energy environments.</div>
+      <a href="#insights" class="expertise-card-link">View Insights →</a>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">🤝</div>
+      <div class="expertise-card-title">Policy & Regulatory Strategy</div>
+      <div class="expertise-card-desc">Engaging government, development banks, and multilateral organizations to shape energy policy, attract FDI, and unlock climate finance at national and continental scale.</div>
+      <a href="#insights" class="expertise-card-link">View Insights →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="insights" id="insights">
+  <div class="section-header fade-in">
+    <div class="section-label">Insights</div>
+    <h2 class="section-title">Thought Leadership</h2>
+    <p class="section-desc">Deep-dive perspectives on climate finance, energy transition, and the evolution of emerging markets.</p>
+  </div>
+  <div class="insights-grid fade-in">
+    <div class="insight-featured">
+      <div class="insight-featured-image">
+        <span class="tag">FEATURED ARTICLE</span>
+        <span style="font-size:13px">Article hero image</span>
+      </div>
+      <div class="insight-featured-body">
+        <div class="insight-date">March 2026 · 12 min read</div>
+        <div class="insight-title">Why Africa's Carbon Markets Are the World's Most Undervalued Climate Asset</div>
+        <div class="insight-excerpt">The continent holds over 60% of the world's remaining tropical forests and degraded land with restoration potential — yet African carbon projects represent less than 8% of global carbon credit issuances. This is the arbitrage opportunity of the decade.</div>
+        <a href="#" class="insight-read">Read Full Article →</a>
+      </div>
+    </div>
+    <div class="insight-list">
+      <div class="insight-item">
+        <div class="insight-item-tag">EV Mobility</div>
+        <div class="insight-item-title">The Infrastructure Gap That Will Make or Break Africa's EV Transition</div>
+        <div class="insight-item-meta">February 2026 · 8 min read</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-item-tag">Climate Finance</div>
+        <div class="insight-item-title">Blended Finance Models for Energy Access: Lessons from East Africa</div>
+        <div class="insight-item-meta">January 2026 · 10 min read</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-item-tag">ESG Strategy</div>
+        <div class="insight-item-title">Beyond Compliance: Building ESG Cultures in African Energy Companies</div>
+        <div class="insight-item-meta">December 2025 · 7 min read</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-item-tag">Policy</div>
+        <div class="insight-item-title">Article 6 of the Paris Agreement: What it Means for African Developers</div>
+        <div class="insight-item-meta">November 2025 · 9 min read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MERCHANDISE -->
+<section class="merch" id="merch">
+  <div class="section-header fade-in" style="position:relative;z-index:2">
+    <div class="section-label">The HI Collection</div>
+    <h2 class="section-title">Merchandise & Resources</h2>
+    <p class="section-desc">Carry the mission forward. From branded leadership gear to exclusive publications and digital resources — curated for climate professionals and changemakers.</p>
+  </div>
+  <div class="merch-grid fade-in" style="position:relative;z-index:2">
+    <div class="merch-card">
+      <div class="merch-image">📘</div>
+      <div class="merch-body">
+        <div class="merch-name">Climate Finance Playbook</div>
+        <div class="merch-tagline">The definitive guide to structuring climate investments in Africa. Digital + Print.</div>
+        <div class="merch-price">$49</div>
+        <button class="merch-btn">Add to Cart</button>
+      </div>
+    </div>
+    <div class="merch-card">
+      <div class="merch-image">👔</div>
+      <div class="merch-body">
+        <div class="merch-name">Signature Executive Polo</div>
+        <div class="merch-tagline">Premium branded polo — navy & gold. Worn by HI at every keynote.</div>
+        <div class="merch-price">$75</div>
+        <button class="merch-btn">Add to Cart</button>
+      </div>
+    </div>
+    <div class="merch-card">
+      <div class="merch-image">🗒️</div>
+      <div class="merch-body">
+        <div class="merch-name">ESG Strategy Workbook</div>
+        <div class="merch-tagline">12-week structured workbook for embedding ESG into your organization. Physical notebook.</div>
+        <div class="merch-price">$35</div>
+        <button class="merch-btn">Add to Cart</button>
+      </div>
+    </div>
+    <div class="merch-card">
+      <div class="merch-image">☕</div>
+      <div class="merch-body">
+        <div class="merch-name">Climate Leader Mug</div>
+        <div class="merch-tagline">"Engineer the Transition" ceramic mug. Limited edition, dishwasher safe.</div>
+        <div class="merch-price">$28</div>
+        <button class="merch-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="merch-grid fade-in" style="position:relative;z-index:2;grid-template-columns:repeat(2,1fr)">
+    <div class="merch-card" style="display:flex;flex-direction:row;align-items:center">
+      <div class="merch-image" style="aspect-ratio:auto;width:120px;height:120px;flex-shrink:0">🎧</div>
+      <div class="merch-body">
+        <div class="merch-name">Annual Masterclass Bundle</div>
+        <div class="merch-tagline">All 12 monthly webinars + recordings, Q&A access, and exclusive newsletter. One annual membership.</div>
+        <div class="merch-price">$299 <span style="font-size:13px;color:rgba(255,255,255,0.35);font-family:'DM Sans',sans-serif;font-weight:400">/ year</span></div>
+        <button class="merch-btn">Subscribe →</button>
+      </div>
+    </div>
+    <div class="merch-card" style="display:flex;flex-direction:row;align-items:center">
+      <div class="merch-image" style="aspect-ratio:auto;width:120px;height:120px;flex-shrink:0">📊</div>
+      <div class="merch-body">
+        <div class="merch-name">Carbon Project Toolkit</div>
+        <div class="merch-tagline">Financial models, VCS/Gold Standard templates, community consultation frameworks. Instant download.</div>
+        <div class="merch-price">$149</div>
+        <button class="merch-btn">Buy Now →</button>
+      </div>
+    </div>
+  </div>
+  <div class="merch-shipping fade-in" style="position:relative;z-index:2">
+    🚚 Free shipping on orders over <span>$100</span> · Worldwide delivery · Digital downloads available instantly
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-header fade-in">
+    <div class="section-label">Social Proof</div>
+    <h2 class="section-title">What Industry Leaders Are Saying</h2>
+    <p class="section-desc">Professional perspectives on leadership, climate strategy, and infrastructure expertise.</p>
+  </div>
+  <div class="testimonials-grid fade-in">
+    <div class="testimonial-card">
+      <div class="testimonial-verify" title="LinkedIn Verified">🔵</div>
+      <div class="testimonial-quote-mark">"</div>
+      <div class="testimonial-text">"The depth of expertise Humphrey brought transformed our approach to large-scale climate infrastructure projects. Truly exceptional leadership — he sees around corners."</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">JM</div>
+        <div>
+          <div class="testimonial-name">James M.</div>
+          <div class="testimonial-role">Senior Executive · Global Infrastructure Group</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-verify" title="LinkedIn Verified">🔵</div>
+      <div class="testimonial-quote-mark">"</div>
+      <div class="testimonial-text">"A rare combination of strategic foresight and technical proficiency. Humphrey is the gold standard for industry guidance on African energy transition."</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">AN</div>
+        <div>
+          <div class="testimonial-name">Amara N.</div>
+          <div class="testimonial-role">Managing Director · Sustainability Council</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-verify" title="LinkedIn Verified">🔵</div>
+      <div class="testimonial-quote-mark">"</div>
+      <div class="testimonial-text">"Navigating complex policy landscapes requires precision, and that is exactly what Humphrey delivers. A vital and trusted partner for our climate mission."</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">SK</div>
+        <div>
+          <div class="testimonial-name">Sarah K.</div>
+          <div class="testimonial-role">Policy Advisor · Strategic Energy Initiative</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials-nav">
+    <button class="t-nav-btn">←</button>
+    <button class="t-nav-btn">→</button>
+  </div>
+</section>
+
+<!-- REFERRALS -->
+<section class="referrals" id="referrals">
+  <div class="section-header fade-in">
+    <div class="section-label">Grow Together</div>
+    <h2 class="section-title">Refer & Earn</h2>
+    <p class="section-desc">Know an organization that would benefit from Humphrey's expertise? Refer them and earn rewards when they book any engagement.</p>
+  </div>
+
+  <div class="referral-hero fade-in">
+    <div class="referral-hero-inner">
+      <div class="referral-hero-text">
+        <h2>Turn Your Network Into a<br>Force for Good — and Reward</h2>
+        <p>Climate action needs more leaders. When you connect your network to Humphrey's engagements, you earn meaningful rewards while helping organizations build better climate strategies.</p>
+        <div class="referral-steps">
+          <div class="referral-step">
+            <div class="referral-step-num">1</div>
+            <div class="referral-step-text">
+              <strong>Share</strong>
+              <span>Submit a referral with your contact's info and the type of engagement.</span>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-num">2</div>
+            <div class="referral-step-text">
+              <strong>They Book</strong>
+              <span>When your referral books any session or engagement, it's confirmed.</span>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-num">3</div>
+            <div class="referral-step-text">
+              <strong>You Earn</strong>
+              <span>Receive your reward within 14 days of the engagement completing.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="referral-rewards">
+        <div class="referral-reward">
+          <div class="reward-icon">💰</div>
+          <div>
+            <div class="reward-title">10% Cash Commission</div>
+            <div class="reward-desc">On advisory & keynote bookings</div>
+          </div>
+        </div>
+        <div class="referral-reward">
+          <div class="reward-icon">🎁</div>
+          <div>
+            <div class="reward-title">Free Masterclass Access</div>
+            <div class="reward-desc">For webinar referrals</div>
+          </div>
+        </div>
+        <div class="referral-reward">
+          <div class="reward-icon">📚</div>
+          <div>
+            <div class="reward-title">Digital Resource Bundle</div>
+            <div class="reward-desc">Climate Finance Toolkit + Workbook</div>
+          </div>
+        </div>
+        <div class="referral-reward">
+          <div class="reward-icon">🏆</div>
+          <div>
+            <div class="reward-title">Top Referrer Recognition</div>
+            <div class="reward-desc">Featured in monthly newsletter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="referral-form-wrap fade-in">
+    <div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:8px">Submit a Referral</h3>
+      <p style="font-size:15px;color:var(--slate);margin-bottom:28px">Fill in your contact's details and we'll take it from there.</p>
+      <div class="referral-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name *</label>
+            <input type="text" class="form-input" placeholder="Jane Osei">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Email *</label>
+            <input type="email" class="form-input" placeholder="jane@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Referee Name *</label>
+            <input type="text" class="form-input" placeholder="Contact's full name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Referee Email *</label>
+            <input type="email" class="form-input" placeholder="contact@org.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Referee Organisation</label>
+          <input type="text" class="form-input" placeholder="Company or institution name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Engagement Type</label>
+          <select class="form-select">
+            <option>Webinar / Masterclass</option>
+            <option>Conference / Keynote</option>
+            <option>Strategy Advisory Session</option>
+            <option>Corporate Workshop</option>
+            <option>Fractional Leadership</option>
+            <option>Board / NED Role</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Notes (optional)</label>
+          <textarea class="form-textarea" rows="3" placeholder="Any context about the referee or their needs..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;justify-content:center">Submit Referral →</button>
+        <p style="font-size:12px;color:var(--slate);text-align:center">By submitting, you confirm you have permission to share your contact's details.</p>
+      </div>
+    </div>
+    <div class="referral-stats">
+      <div class="referral-stat-card">
+        <div class="ref-stat-num">47</div>
+        <div class="ref-stat-label">Referrals This Year</div>
+        <div class="ref-stat-desc">From professionals across Africa and the global climate finance community.</div>
+      </div>
+      <div class="referral-stat-card">
+        <div class="ref-stat-num">$38K</div>
+        <div class="ref-stat-label">Paid Out in Commissions</div>
+        <div class="ref-stat-desc">Referral rewards distributed in the last 12 months to community members.</div>
+      </div>
+      <div class="referral-stat-card">
+        <div class="ref-stat-num">92%</div>
+        <div class="ref-stat-label">Referral Conversion Rate</div>
+        <div class="ref-stat-desc">Of referred organizations go on to book an engagement within 30 days.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-header fade-in">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title">Start a Conversation</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info fade-in">
+      <div class="contact-photo">
+        <div style="text-align:center">
+          <div style="font-size:48px;margin-bottom:8px;opacity:0.3">👤</div>
+          <div style="font-size:13px">Replace with<br>Eng. Indire's photo</div>
+        </div>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:humphrey@indire.com" class="contact-link">
+          <span class="contact-link-icon">✉️</span>
+          <div>
+            <div class="contact-link-text">humphrey@indire.com</div>
+            <div class="contact-link-sub">Responds within 48 hours</div>
+          </div>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">💼</span>
+          <div>
+            <div class="contact-link-text">LinkedIn Profile</div>
+            <div class="contact-link-sub">linkedin.com/in/humphreyindire</div>
+          </div>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">📍</span>
+          <div>
+            <div class="contact-link-text">Nairobi, Kenya</div>
+            <div class="contact-link-sub">EAT — UTC+3 · Available for global travel</div>
+          </div>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">💬</span>
+          <div>
+            <div class="contact-link-text">WhatsApp</div>
+            <div class="contact-link-sub">For urgent enquiries only</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form fade-in">
+      <h3>Send a Message</h3>
+      <p>I'm always open to discussing new projects, advisory opportunities, or ideas to advance climate finance across Africa.</p>
+      <div class="contact-form-inner">
+        <div class="form-row2">
+          <div class="form-group">
+            <label class="form-label">First Name *</label>
+            <input type="text" class="form-input" placeholder="Enter your first name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name *</label>
+            <input type="text" class="form-input" placeholder="Enter your last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email *</label>
+          <input type="email" class="form-input" placeholder="example@domain.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Organisation</label>
+          <input type="text" class="form-input" placeholder="Company or institution">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject *</label>
+          <select class="form-select">
+            <option>Booking enquiry</option>
+            <option>Advisory / Consulting</option>
+            <option>Speaking / Conference</option>
+            <option>Partnership opportunity</option>
+            <option>Media / Press</option>
+            <option>General enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message *</label>
+          <textarea class="form-textarea" rows="5" placeholder="Type your message here..."></textarea>
+        </div>
+        <button class="btn-primary" style="justify-content:center;width:100%">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Eng. Humphrey Indire</div>
+      <div class="footer-brand-tagline">Energy Transition · Climate Finance · Infrastructure Leadership<br>Engineering Africa's sustainable future — one bold initiative at a time.</div>
+      <div class="footer-socials">
+        <a href="#" class="footer-social">💼</a>
+        <a href="#" class="footer-social">🐦</a>
+        <a href="#" class="footer-social">📸</a>
+        <a href="#" class="footer-social">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="#about">About</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#projects">Projects</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#insights">Insights</a>
+    </div>
+    <div class="footer-col">
+      <h4>Engage</h4>
+      <a href="#booking">Book a Session</a>
+      <a href="#booking">Fractional Leadership</a>
+      <a href="#booking">Keynote Speaking</a>
+      <a href="#merch">Merchandise</a>
+      <a href="#referrals">Refer & Earn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">Download CV</a>
+      <a href="#">Climate Finance Playbook</a>
+      <a href="#">ESG Workbook</a>
+      <a href="#">Media Kit</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>Eng. Humphrey Indire · © 2026 All rights reserved. Nairobi, Kenya.</div>
+    <div class="footer-bottom-right">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Data Protection (KDPA)</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  faders.forEach(el => observer.observe(el));
+
+  // Expertise pill toggle
+  document.querySelectorAll('.expertise-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.expertise-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
