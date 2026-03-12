@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImg from '../../assets/images/Hero Shot.png';
+import heroImg from '../../assets/images/Hero Shot.webp';
 import { HERO_STATS } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
 import Stat from '../ui/Stat';

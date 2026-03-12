@@ -1,5 +1,5 @@
 import React from 'react';
-import formImg from '../../assets/images/form.png';
+import formImg from '../../assets/images/form.webp';
 import { useFadeIn } from '../../hooks/useFadeIn';
 import Button from '../ui/Button';
 
