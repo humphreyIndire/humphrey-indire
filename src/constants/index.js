@@ -1,3 +1,8 @@
+import mtKenyaImg from '../assets/images/mount-kenya-conservancy.jpg';
+import evChargingImg from '../assets/images/East-Africa-EV-charging.jpg';
+import energyHubImg from '../assets/images/industrial-renewable-energy-hub.webp';
+import carbonCreditImg from '../assets/images/carbon-credit.jpg';
+
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Leadership', href: '#leadership' },
@@ -193,6 +198,7 @@ export const PROJECTS = [
     role: 'Project Lead',
     link: '#',
     imageBg: 'bg-navy',
+    image: mtKenyaImg,
   },
   {
     category: 'Mobility & Finance',
@@ -208,6 +214,7 @@ export const PROJECTS = [
     role: 'Strategy Advisor',
     link: '#',
     imageBg: 'bg-gradient-to-br from-[#1a3a5c] to-teal',
+    image: evChargingImg,
   },
   {
     category: 'Energy Infrastructure',
@@ -223,6 +230,7 @@ export const PROJECTS = [
     role: 'Technical Lead',
     link: '#',
     imageBg: 'bg-gradient-to-br from-[#2d1b00] to-gold',
+    image: energyHubImg,
   },
   {
     category: 'Climate Finance',
@@ -238,6 +246,7 @@ export const PROJECTS = [
     role: 'Architect & Advisor',
     link: '#',
     imageBg: 'bg-gradient-to-br from-[#0a2818] to-teal',
+    image: carbonCreditImg,
   },
 ];
 
@@ -282,32 +291,55 @@ export const EXPERTISE_AREAS = [
 
 export const INSIGHTS = {
   featured: {
-    tag: 'FEATURED ARTICLE',
-    date: 'March 2026 · 12 min read',
-    title: "Why Africa's Carbon Markets Are the World's Most Undervalued Climate Asset",
-    excerpt: "The continent holds over 60% of the world's remaining tropical forests and degraded land with restoration potential — yet African carbon projects represent less than 8% of global carbon credit issuances. This is the arbitrage opportunity of the decade.",
-    link: '#',
+    tag: 'POLICY & PERSPECTIVES',
+    date: 'December 10, 2024',
+    readTime: '3 min',
+    title: 'Renewable Energy Policies: Global and Local Perspectives',
+    excerpt: 'Exploring the intersection of global energy standards and local implementation strategies to accelerate the transition to sustainable power across Africa.',
+    link: 'https://www.linkedin.com/pulse/renewable-energy-policies-global-local-perspectives-indire-olenc/?trackingId=nFI%2BrId1Q9abFR%2Fgwnw%2FHQ%3D%3D',
   },
   list: [
     {
-      tag: 'EV Mobility',
-      title: "The Infrastructure Gap That Will Make or Break Africa's EV Transition",
-      meta: 'February 2026 · 8 min read',
+      tag: 'ESG Strategy',
+      title: 'ESG: Emerging Trends and Practices Shaping Sustainable Business',
+      link: 'https://www.linkedin.com/pulse/esg-emerging-trends-practices-shaping-sustainable-business-indire-kdjlf/?trackingId=nFI%2BrId1Q9abFR%2Fgwnw%2FHQ%3D%3D',
+      date: 'December 4, 2024',
+      readTime: '3 min',
     },
     {
-      tag: 'Climate Finance',
-      title: 'Blended Finance Models for Energy Access: Lessons from East Africa',
-      meta: 'January 2026 · 10 min read',
+      tag: 'Biofuels',
+      title: 'COP29 Outcomes on Biofuels: Unlocking Africa’s Potential',
+      link: 'https://www.linkedin.com/pulse/cop29-outcomes-biofuels-unlocking-africas-potential-indire-hfvif/?trackingId=nFI%2BrId1Q9abFR%2Fgwnw%2FHQ%3D%3D',
+      date: 'November 2024',
+      readTime: '3 min',
     },
     {
       tag: 'ESG Strategy',
-      title: 'Beyond Compliance: Building ESG Cultures in African Energy Companies',
-      meta: 'December 2025 · 7 min read',
+      title: 'ESG: Emerging Trends & Practices Shaping the Future',
+      link: 'https://www.linkedin.com/pulse/esg-emerging-trends-practices-shaping-future-eng-humphrey-m-indire-ehrzc/?trackingId=nFI%2BrId1Q9abFR%2Fgwnw%2FHQ%3D%3D',
+      date: 'October 3, 2024',
+      readTime: '4 min',
     },
     {
-      tag: 'Policy',
-      title: 'Article 6 of the Paris Agreement: What it Means for African Developers',
-      meta: 'November 2025 · 9 min read',
+      tag: 'Clean Energy',
+      title: 'Driving Clean Energy and Sustainability: Community Insights',
+      link: 'https://www.linkedin.com/pulse/driving-clean-energy-sustainability-community-insights-indire-fu2df/?trackingId=GVM650XnSX2nmpybspq3Ow%3D%3D',
+      date: 'August 5, 2024',
+      readTime: '3 min',
+    },
+    {
+      tag: 'Carbon Credits',
+      title: 'Understanding Carbon Credits: Unlocking Opportunities for Kenyan Enterprises',
+      link: 'https://www.linkedin.com/pulse/understanding-carbon-credits-unlocking-opportunities-kenyan-indire-j9xrf/?trackingId=GVM650XnSX2nmpybspq3Ow%3D%3D',
+      date: 'July 26, 2024',
+      readTime: '4 min',
+    },
+    {
+      tag: 'Energy Transition',
+      title: 'The Critical Impact of HSE Leadership in the Energy Transition',
+      link: 'https://www.linkedin.com/pulse/critical-impact-hse-leadership-energy-transition-indire-t8htf/?trackingId=GVM650XnSX2nmpybspq3Ow%3D%3D',
+      date: 'February 8, 2024',
+      readTime: '3 min',
     },
   ],
 };

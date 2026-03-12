@@ -1,4 +1,5 @@
 import React from 'react';
+import formImg from '../../assets/images/form.png';
 import { useFadeIn } from '../../hooks/useFadeIn';
 import Button from '../ui/Button';
 
@@ -17,11 +18,13 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start">
           <div className="fade-in" ref={infoRef}>
-            <div className="w-full aspect-[3/4] bg-navy rounded-[20px] mb-8 flex items-center justify-center relative overflow-hidden">
-              <div className="text-center text-white/20">
-                <div className="text-5xl mb-2 opacity-20">👤</div>
-                <p className="text-[13px]">Replace with<br />Eng. Indire's photo</p>
-              </div>
+            <div className="w-full aspect-[3/4] bg-navy rounded-[20px] mb-8 relative overflow-hidden shadow-2xl group transition-transform hover:-rotate-1">
+              <img 
+                src={formImg} 
+                alt="Eng. Humphrey Indire" 
+                className="w-full h-full object-cover grayscale brightness-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors"></div>
             </div>
 
             <div className="flex flex-col gap-3.5">

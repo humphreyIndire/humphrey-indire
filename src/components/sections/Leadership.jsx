@@ -1,4 +1,5 @@
 import React from 'react';
+import leadershipImg from '../../assets/images/leadership.jpeg';
 import { EXPERIENCES, ESG_INDEX } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
 
@@ -37,11 +38,13 @@ const Leadership = () => {
           </div>
 
           <div className="fade-in" ref={sidebarRef}>
-            <div className="w-full aspect-[4/5] bg-navy rounded-[20px] mb-6 flex items-center justify-center relative overflow-hidden">
-              <div className="text-center">
-                <div className="text-5xl opacity-20 mb-2">👤</div>
-                <p className="text-[13px] text-white/20">Replace with actual photo<br />of Eng. Humphrey Indire</p>
-              </div>
+            <div className="w-full aspect-[4/5] bg-navy rounded-[20px] mb-6 relative overflow-hidden shadow-xl group">
+              <img 
+                src={leadershipImg} 
+                alt="Eng. Humphrey Indire Leadership" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
             </div>
 
             <div className="bg-white border border-border-subtle rounded-2xl p-6">

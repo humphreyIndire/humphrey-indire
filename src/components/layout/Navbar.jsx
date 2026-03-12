@@ -24,51 +24,55 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-[130] flex items-center justify-between px-6 md:px-12 h-[72px] transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-sm' : 'bg-white/90 backdrop-blur-sm shadow-none border-b border-transparent'
+      <nav className={`fixed top-0.5 left-1/2 -translate-x-1/2 z-[130] w-[calc(100%-2rem)] max-w-7xl transition-all duration-500 rounded-full border border-white/10 ${isScrolled || isMenuOpen
+          ? 'bg-navy/15 backdrop-blur-xl shadow-lg border-white/20'
+          : 'bg-white/5 backdrop-blur-md shadow-none'
         }`}>
-        {/* Brand */}
-        <div className="flex flex-col gap-0.5 relative z-[120]">
-          <div className="font-playfair font-bold text-base md:text-lg text-navy leading-tight">Eng. Humphrey Indire</div>
-          <div className="font-dm-mono text-[9px] md:text-[10px] text-teal tracking-[0.12em] uppercase">ENERGY · ESG · CLIMATE FINANCE</div>
-        </div>
-
-        {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-9">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-sm font-medium text-navy/70 hover:text-navy transition-colors relative group"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          ))}
-          <div className="flex items-center gap-1.5 bg-teal/5 border border-teal/20 py-1.5 px-3 rounded-full text-xs text-teal font-medium">
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-light animate-[pulse_2s_infinite]"></span>
-            Open to Advisory
+        <div className="flex items-center justify-between px-6 md:px-10 h-[55px]">
+          {/* Brand */}
+          <div className="flex flex-col gap-0.5 relative z-[120]">
+            <div className="font-playfair font-bold text-base md:text-lg text-white leading-tight">Eng. Humphrey Indire</div>
+            <div className="font-dm-mono text-[9px] md:text-[10px] text-teal-light tracking-[0.12em] uppercase">ENERGY · ESG · CLIMATE FINANCE</div>
           </div>
-          <a
-            href="#contact"
-            className="bg-navy text-white py-2.5 px-6 rounded-md text-sm font-medium hover:bg-teal hover:-translate-y-px transition-all shadow-md shadow-navy/5"
-          >
-            Let's Connect
-          </a>
-        </div>
 
-        {/* Mobile Toggle */}
-        <div className="lg:hidden flex items-center z-[120]">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-navy p-2 focus:outline-none focus:ring-2 focus:ring-teal/20 rounded-lg transition-all"
-            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-          >
-            <div className="w-6 h-5 relative flex flex-col justify-between">
-              <span className={`w-full h-0.5 bg-navy transition-all duration-300 transform origin-left ${isMenuOpen ? 'rotate-45 translate-x-1' : ''}`}></span>
-              <span className={`w-full h-0.5 bg-navy transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-0' : 'opacity-100'}`}></span>
-              <span className={`w-full h-0.5 bg-navy transition-all duration-300 transform origin-left ${isMenuOpen ? '-rotate-45 translate-x-1' : ''}`}></span>
+          {/* Desktop Links */}
+          <div className="hidden lg:flex items-center gap-9">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors relative group"
+              >
+                {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-light transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
+            <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 py-1.5 px-3 rounded-full text-xs text-white/90 font-medium whitespace-nowrap">
+              <span className="w-1.5 h-1.5 rounded-full bg-teal-light animate-[pulse_2s_infinite]"></span>
+              Open to Advisory
             </div>
-          </button>
+            <a
+              href="#contact"
+              className="bg-teal text-white py-2.5 px-6 rounded-full text-sm font-semibold hover:bg-teal-light hover:-translate-y-px transition-all shadow-lg shadow-teal/20"
+            >
+              Let's Connect
+            </a>
+          </div>
+
+          {/* Mobile Toggle */}
+          <div className="lg:hidden flex items-center z-[120]">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white p-2 focus:outline-none focus:ring-2 focus:ring-white/10 rounded-lg transition-all"
+              aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+            >
+              <div className="w-6 h-5 relative flex flex-col justify-between">
+                <span className={`w-full h-0.5 bg-white transition-all duration-300 transform origin-left ${isMenuOpen ? 'rotate-45 translate-x-1' : ''}`}></span>
+                <span className={`w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-0' : 'opacity-100'}`}></span>
+                <span className={`w-full h-0.5 bg-white transition-all duration-300 transform origin-left ${isMenuOpen ? '-rotate-45 translate-x-1' : ''}`}></span>
+              </div>
+            </button>
+          </div>
         </div>
       </nav>
 

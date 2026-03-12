@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import sessionImg from '../../assets/images/technical-session.jpeg';
 import { BOOKING_CARDS } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
 
@@ -9,8 +10,14 @@ const Booking = () => {
 
   return (
     <section className="bg-navy py-24 px-6 md:px-20 lg:px-24 relative overflow-hidden" id="booking">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[600px] h-full bg-gradient-to-br from-transparent to-teal/15 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-full opacity-20 pointer-events-none">
+        <img 
+          src={sessionImg} 
+          alt="" 
+          className="w-full h-full object-cover grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-navy via-navy/80 to-navy"></div>
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-14 fade-in" ref={headerRef}>

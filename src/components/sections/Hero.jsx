@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImg from '../../assets/images/Hero Shot.png';
 import { HERO_STATS } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
 import Stat from '../ui/Stat';
@@ -9,7 +10,7 @@ const Hero = () => {
   const imageRef = useFadeIn();
 
   return (
-    <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center px-6 md:px-20 py-24 lg:py-32 bg-navy relative overflow-hidden" id="home">
+    <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center px-6 md:px-20 pt-32 pb-24 lg:pt-40 lg:pb-32 bg-navy relative overflow-hidden" id="home">
       {/* Decorative Gradients */}
       <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] bg-[radial-gradient(circle,rgba(11,123,110,0.25)_0%,transparent_70%)] pointer-events-none"></div>
       <div className="absolute -bottom-[100px] left-[200px] w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(201,168,76,0.12)_0%,transparent_70%)] pointer-events-none"></div>
@@ -19,7 +20,7 @@ const Hero = () => {
           <span className="w-8 h-px bg-teal-light"></span>
           Africa's Climate Finance & Energy Leader
         </div>
-        
+
         <h1 className="font-playfair text-[clamp(42px,5vw,68px)] font-black text-white leading-[1.08] mb-5">
           Energy <em className="text-gold italic">Transition,</em><br />
           Climate Finance &<br />
@@ -52,10 +53,13 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:flex justify-center items-end relative z-10 fade-in" ref={imageRef}>
-        <div className="w-[420px] h-[520px] bg-gradient-to-br from-teal/30 to-gold/15 rounded-3xl border border-white/10 flex items-center justify-center relative overflow-hidden text-white/30 text-center">
-          <div className="flex flex-col items-center gap-3">
-            <div className="text-6xl opacity-30">👤</div>
-            <p className="text-[13px] opacity-50">Replace with<br />professional portrait</p>
+        <div className="w-[500px] h-[700px] relative">
+          <div className="w-full h-full overflow-hidden relative">
+            <img
+              src={heroImg}
+              alt="Eng. Humphrey Indire"
+              className="w-full h-full object-cover object-top"
+            />
           </div>
         </div>
       </div>
