@@ -1,6 +1,7 @@
 import React from 'react';
 import { PROJECTS } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
+import ProgressiveImage from '../ui/ProgressiveImage';
 
 const Projects = () => {
   const headerRef = useFadeIn();
@@ -23,7 +24,7 @@ const Projects = () => {
             >
               <div className="w-full h-[240px] relative overflow-hidden group">
                 {project.image ? (
-                  <img 
+                  <ProgressiveImage 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -33,7 +34,7 @@ const Projects = () => {
                     <span className="text-[13px] text-white/20">Project image placeholder</span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="absolute top-4 left-4 bg-white/12 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold tracking-[0.1em] uppercase py-1.5 px-3 rounded-full z-10">
                   {project.category}
                 </span>

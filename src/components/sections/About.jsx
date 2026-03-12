@@ -2,6 +2,7 @@ import React from 'react';
 import aboutImg from '../../assets/images/about.png';
 import { ABOUT_PILLARS } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
+import ProgressiveImage from '../ui/ProgressiveImage';
 
 const About = () => {
   const photoRef = useFadeIn();
@@ -11,7 +12,7 @@ const About = () => {
     <section className="bg-white py-24 px-4 md:px-20 lg:px-24" id="about">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-20 items-start">
         <div className="w-full aspect-[3/4] relative overflow-hidden group fade-in" ref={photoRef}>
-          <img 
+          <ProgressiveImage 
             src={aboutImg} 
             alt="Eng. Humphrey Indire" 
             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 block"

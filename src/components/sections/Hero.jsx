@@ -4,6 +4,7 @@ import { HERO_STATS } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
 import Stat from '../ui/Stat';
 import Button from '../ui/Button';
+import ProgressiveImage from '../ui/ProgressiveImage';
 
 const Hero = () => {
   const contentRef = useFadeIn();
@@ -54,13 +55,12 @@ const Hero = () => {
 
       <div className="hidden lg:flex justify-center items-end relative z-10 fade-in" ref={imageRef}>
         <div className="w-[500px] h-[700px] relative">
-          <div className="w-full h-full overflow-hidden relative">
-            <img
-              src={heroImg}
-              alt="Eng. Humphrey Indire"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
+          <ProgressiveImage
+            src={heroImg}
+            alt="Eng. Humphrey Indire"
+            className="w-full h-full"
+            fetchPriority="high"
+          />
         </div>
       </div>
     </section>

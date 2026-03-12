@@ -2,6 +2,7 @@ import React from 'react';
 import leadershipImg from '../../assets/images/leadership.jpeg';
 import { EXPERIENCES, ESG_INDEX } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
+import ProgressiveImage from '../ui/ProgressiveImage';
 
 const Leadership = () => {
   const headerRef = useFadeIn();
@@ -39,7 +40,7 @@ const Leadership = () => {
 
           <div className="fade-in" ref={sidebarRef}>
             <div className="w-full aspect-[4/5] bg-navy rounded-[20px] mb-6 relative overflow-hidden shadow-xl group">
-              <img 
+              <ProgressiveImage 
                 src={leadershipImg} 
                 alt="Eng. Humphrey Indire Leadership" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

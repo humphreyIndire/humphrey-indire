@@ -2,6 +2,7 @@ import React from 'react';
 import formImg from '../../assets/images/form.webp';
 import { useFadeIn } from '../../hooks/useFadeIn';
 import Button from '../ui/Button';
+import ProgressiveImage from '../ui/ProgressiveImage';
 
 const Contact = () => {
   const headerRef = useFadeIn();
@@ -19,7 +20,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start">
           <div className="fade-in" ref={infoRef}>
             <div className="w-full aspect-[3/4] bg-navy rounded-[20px] mb-8 relative overflow-hidden shadow-2xl group transition-transform hover:-rotate-1">
-              <img 
+              <ProgressiveImage 
                 src={formImg} 
                 alt="Eng. Humphrey Indire" 
                 className="w-full h-full object-cover grayscale brightness-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"

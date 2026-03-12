@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { INSIGHTS } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
 import technicalSessionImg from '../../assets/images/technical-session.jpeg';
+import ProgressiveImage from '../ui/ProgressiveImage';
 
 const Insights = () => {
   const headerRef = useFadeIn();
@@ -23,7 +24,7 @@ const Insights = () => {
           {/* Featured Article */}
           <div className="border border-border-subtle rounded-[20px] overflow-hidden group cursor-pointer hover:border-teal hover:shadow-2xl hover:shadow-teal/10 transition-all duration-300 h-fit">
             <div className="w-full h-[320px] relative overflow-hidden">
-              <img 
+              <ProgressiveImage 
                 src={technicalSessionImg} 
                 alt="Technical Session"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
