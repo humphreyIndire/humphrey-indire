@@ -2,19 +2,16 @@
 
 @theme {
   /* Colors */
-  --color-navy: #0A1628;
-  --color-deep: #0D1F3C;
-  --color-teal: #0B7B6E;
-  --color-teal-light: #0FA492;
-  --color-gold: #C9A84C;
-  --color-gold-light: #E8C97A;
-  --color-cream: #F5F0E8;
-  --color-slate: #8896A8;
-  --color-light-bg: #F8F9FB;
-  --color-border-subtle: rgba(10, 22, 40, 0.08);
+  --color-primary: #0A2540;
+  --color-primary-dark: #1F2933;
+  --color-accent: #2E7D6B;
+  --color-bg-white: #FFFFFF;
+  --color-bg-supporting: #F5F7FA;
+  --color-text-main: #1F2933;
+  --color-text-muted: #6B7280;
+  --color-border-subtle: rgba(10, 37, 64, 0.08);
 
   /* Fonts */
-  --font-playfair: "Playfair Display", serif;
   --font-dm-sans: "DM Sans", sans-serif;
   --font-dm-mono: "DM Mono", monospace;
 
@@ -31,12 +28,12 @@
   }
 
   body {
-    @apply font-dm-sans bg-white text-navy overflow-x-hidden;
+    @apply font-dm-sans bg-white text-primary overflow-x-hidden;
     margin: 0;
   }
 
   h1, h2, h3, h4, .font-serif {
-    @apply font-playfair;
+    @apply font-dm-sans;
   }
 
   .font-mono {
@@ -50,19 +47,19 @@
   }
 
   .section-label {
-    @apply font-dm-mono text-[11px] tracking-[0.2em] uppercase text-teal mb-4 block;
+    @apply font-dm-mono text-[11px] tracking-[0.2em] uppercase text-accent mb-4 block;
   }
 
   .section-title {
-    @apply font-playfair text-3xl md:text-5xl font-black text-navy leading-[1.15] mb-4;
+    @apply font-dm-sans text-3xl md:text-5xl font-black text-primary leading-[1.15] mb-4;
   }
 
   .section-desc {
-    @apply text-lg text-slate leading-relaxed max-w-2xl;
+    @apply text-lg text-text-muted leading-relaxed max-w-2xl;
   }
 
   .btn-primary {
-    @apply bg-teal text-white py-3.5 px-8 rounded-lg text-[15px] font-semibold inline-flex items-center gap-2 transition-all hover:bg-teal-light hover:-translate-y-0.5 hover:shadow-lg hover:shadow-teal/30 cursor-pointer border-none;
+    @apply bg-accent text-white py-3.5 px-8 rounded-lg text-[15px] font-semibold inline-flex items-center gap-2 transition-all hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 cursor-pointer border-none;
   }
 
   .btn-outline {
@@ -70,11 +67,11 @@
   }
 
   .btn-navy {
-    @apply bg-navy text-white py-3 px-7 rounded-lg text-sm font-semibold transition-all hover:bg-teal hover:-translate-y-px;
+    @apply bg-primary text-white py-3 px-7 rounded-lg text-sm font-semibold transition-all hover:bg-accent hover:-translate-y-px;
   }
 
   .btn-gold {
-    @apply bg-gold text-navy py-3 px-7 rounded-lg text-sm font-bold transition-all hover:bg-gold-light hover:-translate-y-px;
+    @apply bg-accent text-white py-3 px-7 rounded-lg text-sm font-bold transition-all hover:bg-accent hover:-translate-y-px;
   }
 
   .fade-in {

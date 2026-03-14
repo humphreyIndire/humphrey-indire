@@ -15,26 +15,26 @@ import Referrals from './components/sections/Referrals';
 import Contact from './components/sections/Contact';
 
 function App() {
-  return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <TrustStrip />
-        <About />
-        <Booking />
-        <Leadership />
-        <Projects />
-        <Expertise />
-        <Insights />
-        <Merchandise />
-        <Testimonials />
-        {/* <Referrals /> */}
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
+ return (
+ <div className="min-h-screen bg-white">
+ <Navbar />
+ <main>
+ <Hero />
+ <TrustStrip />
+ <About />
+ <Booking />
+ <Leadership />
+ <Projects />
+ <Expertise />
+ <Insights />
+ <Merchandise />
+ <Testimonials />
+ {/* <Referrals /> */}
+ <Contact />
+ </main>
+ <Footer />
+ </div>
+ );
 }
 
 export default App;
