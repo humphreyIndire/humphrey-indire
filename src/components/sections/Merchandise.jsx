@@ -1,13 +1,35 @@
-import React from 'react';
-import { MERCHANDISE } from '../../constants';
+import { DIGITAL_TEMPLATES, PROFESSIONAL_MERCHANDISE } from '../../constants';
 import { useFadeIn } from '../../hooks/useFadeIn';
-import Button from '../ui/Button';
+import { ShoppingCart } from 'lucide-react';
+
+const ProductCard = ({ item }) => {
+    const Icon = item.icon;
+    return (
+        <div className="bg-white/5 border border-white/10 rounded-[18px] overflow-hidden group hover:border-accent transition-all duration-300 hover:-translate-y-1">
+            <div className="aspect-square bg-white/[0.04] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <Icon className="w-12 h-12 text-white" strokeWidth={1.5} />
+            </div>
+            <div className="p-5">
+                <h3 className="font-semibold text-sm text-white mb-1 leading-tight h-10 line-clamp-2">{item.name}</h3>
+                <div className="flex items-center justify-between mt-4">
+                    <div className="font-dm-sans text-lg font-bold text-accent">
+                        <span className="text-[10px] text-white/40 font-normal mr-1">KES</span>
+                        {item.price}
+                    </div>
+                    {/* <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <ShoppingCart size={14} />
+                    </div> */}
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const Merchandise = () => {
     const headerRef = useFadeIn();
-    const gridRef = useFadeIn();
-    const bundlesRef = useFadeIn();
-    const footerRef = useFadeIn();
+    const digitalRef = useFadeIn();
+    const merchRef = useFadeIn();
+    const bundleRef = useFadeIn();
 
     return (
         <section className="bg-primary py-24 px-6 md:px-20 lg:px-24 relative overflow-hidden" id="merch">
@@ -15,61 +37,58 @@ const Merchandise = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(201,168,76,0.08)_0%,transparent_60%)] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="mb-14 fade-in" ref={headerRef}>
+                <div className="mb-20 fade-in" ref={headerRef}>
                     <span className="section-label text-accent">The HI Collection</span>
                     <h2 className="section-title text-white">Merchandise & Resources</h2>
                     <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-                        Carry the mission forward. From branded leadership gear to exclusive publications and digital resources — curated for climate professionals and changemakers.
+                        Professional resources and branded gear curated for climate leaders, engineers, and sustainability changemakers.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12 fade-in" ref={gridRef}>
-                    {MERCHANDISE.map((item, i) => (
-                        <div key={i} className="bg-white/5 border border-white/10 rounded-[18px] overflow-hidden group hover:border-accent transition-all duration-300 hover:-translate-y-1">
-                            <div className="aspect-square bg-white/[0.04] flex items-center justify-center text-5xl group-hover:scale-105 transition-transform duration-300">
-                                {item.icon}
-                            </div>
-                            <div className="p-5">
-                                <h3 className="font-semibold text-sm text-white mb-1">{item.name}</h3>
-                                <p className="text-[12px] text-white/40 mb-3.5 leading-tight">{item.tagline}</p>
-                                <div className="font-dm-sans text-xl font-bold text-accent mb-3">{item.price}</div>
-                                {/* <Button variant="merch" className="w-full py-2.5 text-xs">
- {item.cta}
- </Button> */}
-                            </div>
+                {/* Category A: Digital Templates */}
+                <div className="mb-20">
+                    <div className="flex items-center gap-4 mb-8">
+                        <h3 className="text-xl font-bold text-white whitespace-nowrap">Digital Professional Templates</h3>
+                        <div className="h-[1px] bg-white/10 w-full"></div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 fade-in" ref={digitalRef}>
+                        {DIGITAL_TEMPLATES.map((item, i) => (
+                            <ProductCard key={i} item={item} />
+                        ))}
+                    </div>
+
+                    {/* Bundle Offer */}
+                    <div className="mt-10 p-6 bg-accent/5 border border-accent/20 rounded-[20px] flex flex-col md:flex-row items-center justify-between gap-6 fade-in" ref={bundleRef}>
+                        <div>
+                            <h4 className="text-white font-bold text-lg mb-1">Launch Bundle Deal</h4>
+                            <p className="text-white/50 text-sm">Select any 3 templates and save ~20% on your professional toolkit.</p>
                         </div>
-                    ))}
+                        <div className="flex items-center gap-4">
+                            <div className="text-right">
+                                <span className="block text-[10px] text-accent uppercase tracking-wider font-bold">Bundle Price</span>
+                                <div className="text-2xl font-bold text-white">
+                                    <span className="text-xs text-white/40 font-normal mr-1">KES</span>6,500
+                                </div>
+                            </div>
+                            <button className="bg-accent text-primary px-6 py-3 rounded-full font-bold text-sm hover:bg-white transition-colors">
+                                Get Bundle
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-14 fade-in" ref={bundlesRef}>
- <div className="bg-white/5 border border-white/10 rounded-[18px] p-1 flex items-center gap-1 hover:border-accent transition-all group">
- <div className="w-32 h-32 bg-white/[0.04] flex items-center justify-center text-5xl rounded-[14px]">🎧</div>
- <div className="p-4 flex-1">
- <h3 className="font-semibold text-sm text-white mb-1">Annual Masterclass Bundle</h3>
- <p className="text-[11px] text-white/40 mb-3 leading-tight">All 12 monthly webinars + recordings, Q&A access, and exclusive newsletter.</p>
- <div className="flex justify-between items-center">
- <div className="font-dm-sans text-lg font-bold text-accent">$299 <span className="font-dm-sans text-xs text-white/35 font-normal">/ year</span></div>
- <button className="text-xs font-bold text-white hover:text-accent transition-colors">Subscribe →</button>
- </div>
- </div>
- </div>
-
- <div className="bg-white/5 border border-white/10 rounded-[18px] p-1 flex items-center gap-1 hover:border-accent transition-all group">
- <div className="w-32 h-32 bg-white/[0.04] flex items-center justify-center text-5xl rounded-[14px]">📊</div>
- <div className="p-4 flex-1">
- <h3 className="font-semibold text-sm text-white mb-1">Carbon Project Toolkit</h3>
- <p className="text-[11px] text-white/40 mb-3 leading-tight">Financial models, VCS/Gold Standard templates, community consultation frameworks.</p>
- <div className="flex justify-between items-center">
- <div className="font-dm-sans text-lg font-bold text-accent">$149</div>
- <button className="text-xs font-bold text-white hover:text-accent transition-colors">Buy Now →</button>
- </div>
- </div>
- </div>
- </div> */}
-
-                {/* <div className="text-center text-[13px] text-white/30 fade-in" ref={footerRef}>
-                    🚚 Free shipping on orders over <span className="text-accent">$100</span> · Worldwide delivery · Digital downloads available instantly
-                </div> */}
+                {/* Category B: Professional Merchandise */}
+                <div>
+                    <div className="flex items-center gap-4 mb-8">
+                        <h3 className="text-xl font-bold text-white whitespace-nowrap">Professional Merchandise</h3>
+                        <div className="h-[1px] bg-white/10 w-full"></div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 fade-in" ref={merchRef}>
+                        {PROFESSIONAL_MERCHANDISE.map((item, i) => (
+                            <ProductCard key={i} item={item} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     );

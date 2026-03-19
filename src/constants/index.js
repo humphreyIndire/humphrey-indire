@@ -316,39 +316,123 @@ export const INSIGHTS = {
   ],
 };
 
-export const MERCHANDISE = [
+import { 
+  FileText, 
+  ClipboardCheck, 
+  ShieldAlert, 
+  CheckCircle, 
+  Users, 
+  BarChart, 
+  Calculator, 
+  Target, 
+  Layout, 
+  Zap,
+  Coffee,
+  BookOpen,
+  Shirt,
+  Image as ImageIcon,
+  Layers,
+  Star,
+  Search,
+  MessageSquare,
+  LineChart,
+  HardHat,
+  BarChart3,
+  HeartPulse
+} from 'lucide-react';
+
+export const DIGITAL_TEMPLATES = [
   {
-    icon: "📘",
-    name: "Climate Finance Playbook",
-    tagline:
-      "The definitive guide to structuring climate investments in Africa. Digital + Print.",
-    price: "$49",
-    cta: "Add to Cart",
+    icon: FileText,
+    name: "HIRA Template Pack",
+    price: "1,800",
   },
   {
-    icon: "👔",
-    name: "Signature Executive Polo",
-    tagline: "Premium branded polo — navy & gold. Worn by HI at every keynote.",
-    price: "$75",
-    cta: "Add to Cart",
+    icon: ClipboardCheck,
+    name: "Job Safety Analysis (JSA) Template",
+    price: "1,500",
   },
   {
-    icon: "🗒️",
-    name: "ESG Strategy Workbook",
-    tagline:
-      "12-week structured workbook for embedding ESG into your organization. Physical notebook.",
-    price: "$35",
-    cta: "Add to Cart",
+    icon: ShieldAlert,
+    name: "Incident Investigation Toolkit",
+    price: "2,200",
   },
   {
-    icon: "☕",
-    name: "Climate Leader Mug",
-    tagline:
-      '"Engineer the Transition" ceramic mug. Limited edition, dishwasher safe.',
-    price: "$28",
-    cta: "Add to Cart",
+    icon: CheckCircle,
+    name: "Safety Inspection Checklist Pack (x20)",
+    price: "2,500",
+  },
+  {
+    icon: MessageSquare,
+    name: "Toolbox Talk Library (x30 topics)",
+    price: "3,200",
+  },
+  {
+    icon: LineChart,
+    name: "ESG Performance Tracking Template",
+    price: "2,800",
+  },
+  {
+    icon: Calculator,
+    name: "Carbon Emissions Calculator (Excel)",
+    price: "3,500",
+  },
+  {
+    icon: HardHat,
+    name: "Contractor Safety Management Toolkit",
+    price: "2,800",
+  },
+  {
+    icon: BarChart3,
+    name: "Safety KPI Dashboard (Excel)",
+    price: "3,200",
+  },
+  {
+    icon: HeartPulse,
+    name: "Safety Culture Assessment Tool",
+    price: "2,500",
   },
 ];
+
+export const PROFESSIONAL_MERCHANDISE = [
+  {
+    icon: Coffee,
+    name: "Safety Culture Mug",
+    price: "1,200",
+  },
+  {
+    icon: BookOpen,
+    name: "ESG / Net Zero Notebook (A5)",
+    price: "900",
+  },
+  {
+    icon: Shirt,
+    name: '"Net Zero Future" T-Shirt',
+    price: "1,800",
+  },
+  {
+    icon: ImageIcon,
+    name: "Energy Transition Poster (A2)",
+    price: "850",
+  },
+  {
+    icon: Shirt,
+    name: "Climate Leadership Hoodie",
+    price: "3,500",
+  },
+  {
+    icon: Layers,
+    name: "Laminated Toolbox Talk Cards (x10)",
+    price: "700",
+  },
+  {
+    icon: Star,
+    name: "Safety Sticker Pack (x15)",
+    price: "400",
+  },
+];
+
+export const MERCHANDISE = [...DIGITAL_TEMPLATES, ...PROFESSIONAL_MERCHANDISE];
 
 export const TESTIMONIALS = [
   {
