@@ -124,17 +124,17 @@ export const BOOKING_CARDS = [
 
 export const EXPERIENCES = [
   {
-    role: "Chief Officer – Climate Finance & EV Transition",
-    company: "KIBO Motorcycles – Nairobi",
-    period: "January 2026 – Present",
-    desc: "Provides executive leadership for climate finance strategy and electric mobility transition across East Africa. Leads the structuring of blended finance, carbon credit monetization, and climate-aligned capital to support large-scale e-mobility deployment while building partnerships with DFIs, impact investors, and carbon registries. Advises the Board and shareholders on EV transition strategy, carbon revenue models, and long-term enterprise value creation.",
-    current: true,
-  },
-  {
     role: "Non-Executive Director – Carbon Markets & Climate Strategy",
     company: "Dalbit Petroleum – Nairobi",
     period: "January 2026 – Present",
     desc: "Serves in a board-level advisory role guiding the company's carbon markets strategy and broader energy transition positioning. Provides governance oversight on ESG integration while supporting the development of nature-based and technology-driven carbon projects. Contributes strategic insight to align traditional energy operations with emerging low-carbon opportunities.",
+    current: true,
+  },
+  {
+    role: "Chief Officer – Climate Finance & EV Transition",
+    company: "KIBO Motorcycles – Nairobi",
+    period: "January 2026 – Present",
+    desc: "Provides executive leadership for climate finance strategy and electric mobility transition across East Africa. Leads the structuring of blended finance, carbon credit monetization, and climate-aligned capital to support large-scale e-mobility deployment while building partnerships with DFIs, impact investors, and carbon registries. Advises the Board and shareholders on EV transition strategy, carbon revenue models, and long-term enterprise value creation.",
     current: false,
   },
   {
