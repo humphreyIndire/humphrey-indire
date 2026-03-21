@@ -47,7 +47,7 @@ const Contact = () => {
           organisation: formData.organisation,
           subject: formData.subject,
           message: formData.message,
-          to_email: "humphrey@humphreyindire.com",
+          to_email: "info@humphreyindire.com",
         }),
       });
 
@@ -102,7 +102,17 @@ const Contact = () => {
                 {
                   icon: "✉️",
                   title: "humphrey@humphreyindire.com",
-                  sub: "Responds within 48 hours",
+                  sub: "Direct Contact",
+                },
+                {
+                  icon: "✉️",
+                  title: "info@humphreyindire.com",
+                  sub: "General Inquiries",
+                },
+                {
+                  icon: "✉️",
+                  title: "irene@humphreyindire.com",
+                  sub: "Support",
                 },
                 {
                   icon: "💼",

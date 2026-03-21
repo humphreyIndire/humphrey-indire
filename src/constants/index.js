@@ -17,8 +17,11 @@ export const HERO_STATS = [
 ];
 
 export const TRUST_LOGOS = [
-  "KIBO Motorcycles",
   "Dalbit Petroleum",
+  "TerraVolt Energies",
+  "Lexo Energy",
+  "KIBO Motorcycles",
+  "Shell/Vivo Energy",
   "KOKO Networks",
   "StarCharge Africa",
   "IFC / World Bank",
@@ -195,7 +198,7 @@ export const PROJECTS = [
   },
   {
     category: "Infrastructure Rollout",
-    title: "Delivery of 44 New Shell Petrol Stations",
+    title: "Delivery of 72 New Shell Petrol Stations",
     desc: "September 2015 – Present\nLed engineering delivery for large-scale fuel retail infrastructure rollout including construction, upgrades, and automation of multiple retail service stations across the region while ensuring HSSE compliance and CAPEX control.",
     outcomes: [],
     lead: "Eng. Humphrey Indire",
@@ -316,16 +319,16 @@ export const INSIGHTS = {
   ],
 };
 
-import { 
-  FileText, 
-  ClipboardCheck, 
-  ShieldAlert, 
-  CheckCircle, 
-  Users, 
-  BarChart, 
-  Calculator, 
-  Target, 
-  Layout, 
+import {
+  FileText,
+  ClipboardCheck,
+  ShieldAlert,
+  CheckCircle,
+  Users,
+  BarChart,
+  Calculator,
+  Target,
+  Layout,
   Zap,
   Coffee,
   BookOpen,
