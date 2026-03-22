@@ -6,8 +6,12 @@ const ProductCard = ({ item }) => {
     const Icon = item.icon;
     return (
         <div className="bg-white/5 border border-white/10 rounded-[18px] overflow-hidden group hover:border-accent transition-all duration-300 hover:-translate-y-1">
-            <div className="aspect-square bg-white/[0.04] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <Icon className="w-12 h-12 text-white" strokeWidth={1.5} />
+            <div className="aspect-square bg-white/[0.04] flex items-center justify-center group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                {item.image ? (
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                ) : (
+                    <Icon className="w-12 h-12 text-white" strokeWidth={1.5} />
+                )}
             </div>
             <div className="p-5">
                 <h3 className="font-semibold text-sm text-white mb-1 leading-tight h-10 line-clamp-2">{item.name}</h3>
@@ -70,9 +74,9 @@ const Merchandise = () => {
                                     <span className="text-xs text-white/40 font-normal mr-1">KES</span>6,500
                                 </div>
                             </div>
-                            <button className="bg-accent text-primary px-6 py-3 rounded-full font-bold text-sm hover:bg-white transition-colors">
+                            <a href="#contact" className="bg-accent text-primary px-6 py-3 rounded-full font-bold text-sm hover:bg-white transition-colors inline-block text-center">
                                 Get Bundle
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,10 @@
 import vivoEnergyImage from "../assets/images/VivoEnergy - Outstanding-Performance-Award-Recognition.png";
 import engenImage from "../assets/images/Engen_Petroleum_logo.png";
+import climateHoodieImg from "../assets/images/merch/Climate Leadership Hoodie.png";
+import energyPosterImg from "../assets/images/merch/Energy Transition Poster.png";
+import netZeroTShirtImg from "../assets/images/merch/Net Zero Future T-Shirt.png";
+import netZeroNotebookImg from "../assets/images/merch/Net Zero Notebook A5.png";
+import safetyMugImg from "../assets/images/merch/Safety Culture Mug.png";
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -400,26 +405,31 @@ export const DIGITAL_TEMPLATES = [
 export const PROFESSIONAL_MERCHANDISE = [
   {
     icon: Coffee,
+    image: safetyMugImg,
     name: "Safety Culture Mug",
     price: "1,200",
   },
   {
     icon: BookOpen,
+    image: netZeroNotebookImg,
     name: "ESG / Net Zero Notebook (A5)",
     price: "900",
   },
   {
     icon: Shirt,
-    name: '"Net Zero Future" T-Shirt',
+    image: netZeroTShirtImg,
+    name: 'Net Zero Future T-Shirt',
     price: "1,800",
   },
   {
     icon: ImageIcon,
+    image: energyPosterImg,
     name: "Energy Transition Poster (A2)",
     price: "850",
   },
   {
     icon: Shirt,
+    image: climateHoodieImg,
     name: "Climate Leadership Hoodie",
     price: "3,500",
   },
