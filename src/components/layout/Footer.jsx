@@ -57,7 +57,15 @@ const Footer = () => {
             </div>
 
             <div className="border-t border-white/10 pt-7 flex flex-col md:flex-row justify-between items-center gap-4">
-                <div className="text-sm">Eng. Humphrey Indire · © 2026 All rights reserved. Nairobi, Kenya.</div>
+                <div className="text-sm text-white/50 font-medium">
+                    Eng. Humphrey Indire
+                </div>
+                <div className="text-sm text-white/30 text-center flex-1">
+                    © 2026 All rights reserved. Nairobi, Kenya.
+                </div>
+                <div className="text-sm text-white/30 hover:text-white/50 transition-colors">
+                    Developed by <a href="https://techridian.com" target="_blank" rel="noopener noreferrer" className="text-accent font-medium hover:underline underline-offset-4">Techridian</a>
+                </div>
                 {/* <div className="flex gap-6">
  <a href="#" className="text-xs text-white/35 hover:text-accent transition-colors">Privacy Policy</a>
  <a href="#" className="text-xs text-white/35 hover:text-accent transition-colors">Terms of Use</a>
